@@ -24,7 +24,8 @@ public partial class MenuService
     {
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleAgents);
-
+        main.Design.SetDefaultComment("");
+        
         var reset = new ButtonMenuOption(LocalizationService[player].MenuReset);
         reset.Click += (_, args) =>
         {
