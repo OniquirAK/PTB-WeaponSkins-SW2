@@ -31,6 +31,7 @@ public partial class MenuService
         var language = GetLanguage(player);
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleGloves);
+        main.Design.SetDefaultComment("");
 
         foreach (var (glove, paintkits) in EconService.WeaponToPaintkits)
         {
