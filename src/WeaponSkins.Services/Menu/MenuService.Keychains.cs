@@ -36,6 +36,7 @@ public partial class MenuService
         var main = Core.MenusAPI.CreateBuilder();
 
         main.Design.SetMenuTitle(title);
+        main.Design.SetDefaultComment("");
 
         var resetOption = new ButtonMenuOption(LocalizationService[player].MenuReset);
         resetOption.Click += (_,
@@ -91,6 +92,7 @@ public partial class MenuService
 
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleKeychains);
+        main.Design.SetDefaultComment("");
         for (int i = 0; i < 1; i++)
         {
             var title =
