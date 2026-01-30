@@ -47,6 +47,7 @@ public partial class MenuService
     {
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitle);
+        main.Design.SetDefaultComment("");
 
         AddMenuOption(main, ItemPermissionService.CanUseWeaponSkins(player.SteamID),
             () => GetWeaponSkinMenuSubmenuOption(player), LocalizationService[player].MenuTitleSkins);
