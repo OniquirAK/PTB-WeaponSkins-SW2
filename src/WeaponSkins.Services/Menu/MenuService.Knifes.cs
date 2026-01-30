@@ -30,6 +30,7 @@ public partial class MenuService
         var language = GetLanguage(player);
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleKnifes);
+        main.Design.SetDefaultComment("");
 
         foreach (var (knife, paintkits) in EconService.WeaponToPaintkits)
         {
@@ -43,6 +44,7 @@ public partial class MenuService
             {
                 var skinMenu = Core.MenusAPI.CreateBuilder();
                 skinMenu.Design.SetMenuTitleVisible(false);
+                skinMenu.Design.SetDefaultComment("");
                 var sorted = paintkits.OrderByDescending(p => p.Rarity.Id).ToList();
                 var resetOption = new ButtonMenuOption(LocalizationService[player].MenuReset);
                 resetOption.Click += (_,
