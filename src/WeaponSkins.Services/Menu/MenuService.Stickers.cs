@@ -48,8 +48,10 @@ public partial class MenuService
         string title)
     {
         var main = Core.MenusAPI.CreateBuilder();
+        main.Design.SetDefaultComment("");
 
         main.Design.SetMenuTitle(title);
+        main.Design.SetDefaultComment("");
         var resetOption = new ButtonMenuOption(LocalizationService[player].MenuReset);
         resetOption.Click += (_,
             args) =>
@@ -74,6 +76,7 @@ public partial class MenuService
             {
                 var stickerMenu = Core.MenusAPI.CreateBuilder();
                 stickerMenu.Design.SetMenuTitle(stickerCollection.LocalizedNames[language]);
+                stickerMenu.Design.SetDefaultComment("");
 
                 foreach (var sticker in stickerCollection.Stickers)
                 {
