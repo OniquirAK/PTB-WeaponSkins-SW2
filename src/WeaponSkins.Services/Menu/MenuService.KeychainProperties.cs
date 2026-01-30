@@ -14,6 +14,7 @@ public partial class MenuService
     {
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleKeychainProperties);
+        main.Design.SetDefaultComment("");
 
         var keychain = data.GetKeychain(slot);
 
