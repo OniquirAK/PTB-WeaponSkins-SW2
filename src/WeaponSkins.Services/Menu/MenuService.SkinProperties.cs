@@ -13,6 +13,7 @@ public partial class MenuService
     {
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleSkinProperties);
+        main.Design.SetDefaultComment("");
 
         var wearOption = new InputMenuOption(
             LocalizationService[player].MenuSkinPropertiesWear,
