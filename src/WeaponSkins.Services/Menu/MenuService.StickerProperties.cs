@@ -14,6 +14,7 @@ public partial class MenuService
     {
         var main = Core.MenusAPI.CreateBuilder();
         main.Design.SetMenuTitle(LocalizationService[player].MenuTitleStickerProperties);
+        main.Design.SetDefaultComment("");
 
         var sticker = data.GetSticker(slot);
 
